@@ -1,9 +1,6 @@
 package Controller;
 
-import Model.Produto;
-
-public class PedidoController {
-
+import Model.*;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,19 +11,16 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-    @WebServlet("/produto")
-    public class ProdutoController extends HttpServlet {
-        private List<Produto> produtos = new ArrayList<>();
+    @WebServlet("/pedido")
+    public class PedidoController extends HttpServlet {
+        private List<Pedido> pedidos = new ArrayList<>();
 
-        public ProdutoController() {
+        public PedidoController() {
             // Adicionando alguns produtos de exemplo
-            produtos.add(new Produto(1, "Produto A", 10.0));
-            produtos.add(new Produto(2, "Produto B", 20.0));
-            produtos.add(new Produto(3, "Produto C", 30.0));
         }
 
         protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-            request.setAttribute("produtos", produtos);
+            request.setAttribute("pedidos", pedidos);
             request.getRequestDispatcher("/WEB-INF/views/produtos.jsp").forward(request, response);
         }
 }

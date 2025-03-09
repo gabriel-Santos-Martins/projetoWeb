@@ -2,8 +2,7 @@ package Controller;
 
 import Model.Produto;
 
-public class ProdutoController {
-    import javax.servlet.ServletException;
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -16,11 +15,8 @@ import java.util.List;
     public class ProdutoController extends HttpServlet {
         private List<Produto> produtos = new ArrayList<>();
 
-        public ProdutoController() {
+        public ProdutoController(Produto produto) {
             // Adicionando alguns produtos de exemplo
-            produtos.add(new Produto(1, "Produto A", 10.0));
-            produtos.add(new Produto(2, "Produto B", 20.0));
-            produtos.add(new Produto(3, "Produto C", 30.0));
         }
 
         protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
