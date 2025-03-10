@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Dos Pets</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img\faficon.png"" type="logo">
+</head>
+<body>
+    <header>
+        <h1>Mundo Dos Pets</h1>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Início</a></li>
+                <li><a href="produto.html">Produtos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="titulo-compra">Finalize sua Compra</h2>
+
+        <div class="detalhes-produto">
+            <img src="img/coelhorosa.png" alt="Brinquedo de Pelúcia">
+            <div class="info-produto">
+                <h3>Brinquedo de Pelúcia</h3>
+                <p class="preco">R$39,99</p>
+            </div>
+        </div>
+
+        <h3>Preencha seus Dados</h3>
+        <form action="finalizar-compra.html" method="post" class="form-finalizar">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="endereco">Endereço</label>
+            <input type="text" id="endereco" name="endereco" required>
+
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+
+            <button type="submit">Finalizar Compra</button>
+        </form>
+
+        <!-- Tela de Confirmação de Compra -->
+        <div class="tela-confirmacao" id="telaConfirmacao">
+            <div class="modal">
+                <h2>Compra Realizada com Sucesso!</h2>
+                <p>Seu pedido foi realizado com sucesso. Em breve você receberá a confirmação.</p>
+                <button class="voltar-btn" onclick="voltarPagina()">Voltar para a Página Inicial</button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>© 2025 Mundo Dos Pets - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Função para exibir a tela de confirmação
+        function exibirTelaConfirmacao() {
+            document.getElementById('telaConfirmacao').style.display = 'flex';
+        }
+
+        // Função para voltar à página inicial
+        function voltarPagina() {
+            window.location.href = 'inicio.html'; // Aqui você pode definir a URL da página inicial
+        }
+    </script>
+
+</body>
+</html>

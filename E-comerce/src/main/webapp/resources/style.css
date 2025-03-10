@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Dangrek&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif, 'Open Sans', sans-serif, 'Dangrek', cursive;
+    background-color: #FFFFFF;
+    color: #126782;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #FF9248;
+    color: white;
+    padding: 5px 15px; /* Reduzindo o padding para deixar mais fino */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 15px;
+    margin: 0px;
+    text-align: right;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #DFEAF5;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #126782;
+}
+
+main {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em uma coluna */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    text-align: center; /* Centraliza o texto */
+    padding: 48px 20px;
+    margin: 40px auto;
+    max-width: 800px;
+}
+
+main h2 {
+    font-size: 65px;
+    color: #219EBC;
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 14px;
+    color: #219EBC;
+    margin-bottom: 15px;
+    margin-top: -20px;
+}
+
+main img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-top: -133px; /* Adiciona espaço entre o botão e a imagem */
+    display: block; /* Remove qualquer espaço extra abaixo da imagem */
+}
+
+.btn {
+    background-color: #FF9248;
+    color: #FFFFFF;
+    padding: 10px 30px;
+    font-size: 13px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+    display: inline-block; /* Garante que a <a> tenha área de clique */
+    position: relative; /* Garante que esteja acima de outros elementos */
+    z-index: 10; /* Certifica que o botão não esteja coberto */
+    cursor: pointer; /* Mostra que o botão é clicável */
+}
+
+.btn:hover {
+    background-color: #219EBC;
+}
+
+/* Estilos para o produto */
+.container {
+    display: flex; /* Usa flexbox para alinhar os itens lado a lado */
+    justify-content: space-between; /* Cria espaço entre os itens */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a linha seguinte, se necessário */
+    gap: 20px; /* Espaçamento entre os itens */
+    margin: 20px auto; /* Alinha o container no meio da página */
+    max-width: 1000px; /* Largura máxima para o container */
+}
+
+.Produto {
+    background-color: #DFEAF5;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    width: 175px; /* Largura do produto */
+    height: 250px; /* Altura fixa do produto */
+    border: 3px solid #219EBC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Alinha os itens no topo */
+    position: relative;
+    overflow: hidden;
+}
+
+.titulo-produto {
+    font-size: 2em;
+    color: #219EBC;
+    text-align: center;
+    margin-top: -35px;
+}
+
+.Produto img {
+    width: 150%; /* Garante que a imagem ocupe toda a largura do contêiner */
+    height: 150px; /* Altura fixa para a imagem */
+    object-fit: cover; /* Faz com que a imagem ocupe o espaço sem distorcer, cortando se necessário */
+    border-radius: 10px;
+}
+
+.Produto h3 {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2em;
+    color: #219EBC;
+    font-weight: bold;
+    padding: 5px;
+    width: 90%;
+    text-align: center;
+}
+
+.Produto .preco {
+    font-size: 15px;
+    color: #219EBC;
+    margin-bottom: 10px;
+}
+
+.Produto button {
+    background-color: #FF9248;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Adiciona espaço entre o preço e o botão */
+}
+
+.Produto button:hover {
+    background-color: #126782;
+}
+
+/* Estilos para o formulário de contato */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-contato {
+    font-size: 30px; 
+    color: #219EBC;
+    margin-top: -30px; /* Reduz a margem superior para mover o título para cima */
+    margin-bottom: 10px; /* Se necessário, ajuste ou remova a margem inferior */
+}
+
+form h1 {
+    text-align: center;
+    font-size: 18px;
+    color: #219EBC;
+    margin-bottom: 20px;
+}
+
+form label {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    color: #219EBC;
+}
+
+form input, form textarea {
+    font-size: 1em;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #FF9248;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #126782;
+}
+
+/* Estilos para a tela de compra */
+.main-content {
+    text-align: center;
+}
+
+.titulo-compra {
+    font-size: 30px; 
+    color: #219EBC;
+    margin-top: -50px; /* Reduz a margem superior para mover o título para cima */
+    margin-bottom: 10px; /* Se necessário, ajuste ou remova a margem inferior */
+}
+
+.detalhes-produto {
+    display: flex; /* Organiza os elementos lado a lado */
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    width: 100%;
+    max-width: 400px; /* Define um tamanho máximo */
+    margin: 20px auto; /* Centraliza a div */
+    padding: 20px;
+    border: 2px solid #219EBC; /* Borda sutil */
+    border-radius: 10px;
+    background-color: #DFEAF5; /* Fundo para destaque */
+}
+
+.detalhes-produto img {
+    width: 125px; /* Define um tamanho menor para a imagem */
+    height: auto; /* Mantém a proporção */
+    border-radius: 8px;
+    margin-right: 15px; /* Espaço entre a imagem e o texto */
+    margin-top: 13px;
+    align-self: flex-end; /* Joga a imagem para baixo dentro do flexbox */
+}
+
+.info-produto {
+    display: flex;
+    flex-direction: column; /* Organiza o nome e o preço um abaixo do outro */
+    text-align: left; /* Alinha o texto */
+}
+
+.info-produto h3 {
+    font-size: 18px;
+    color: #126782;
+    margin: 0 0 5px 0; /* Remove a margem superior e mantém a inferior */
+    position: relative;
+    top: -5px; /* Move o título um pouco para cima */
+}
+
+.info-produto .preco {
+    font-size: 16px;
+    font-weight: bold;
+    color: #FF9248;
+    margin-top: 10px;
+}
+
+/* Estilos específicos para o formulário de finalização de compra */
+.form-finalizar {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-finalizar h3 {
+    font-size: 22px;
+    color: #219EBC;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.form-finalizar label {
+    font-size: 16px;
+    color: #219EBC;
+    margin-bottom: 5px;
+}
+
+.form-finalizar input {
+    font-size: 14px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.form-finalizar button {
+    background-color: #FF9248;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-finalizar button:hover {
+    background-color: #126782;
+}
+
+.comprar-btn {
+    background-color: #FF9248;
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comprar-btn:hover {
+    background-color: #126782;
+}
+
+/* Estilos para a tela de confirmação */
+.tela-confirmacao {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal h2 {
+    color: #219EBC;
+    font-size: 24px;
+}
+
+.modal p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.voltar-btn {
+    background-color: #219EBC;
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.voltar-btn:hover {
+    background-color: #126782;
+}
+
+footer {
+    background-color: #FF9248;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 12px;
+}
